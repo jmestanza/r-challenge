@@ -1,9 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-import { getCharacters } from "../services/character";
-import { PaginatedResponse } from "../interfaces/pagination";
 import { Character } from "../interfaces/character";
+import { PaginatedResponse } from "../interfaces/pagination";
+import { getCharacters } from "../services/character";
 
 const usePagination = (name: string, setError: Function) => {
   const [page, setPage] = useState(1);
@@ -26,11 +25,11 @@ const usePagination = (name: string, setError: Function) => {
   useEffect(() => {
     getCharacters(page, name)
       .then((res) => {
-        setError(false);
+        setError("");
         setContent(res.data);
       })
       .catch((e) => {
-        setError(true);
+        setError(e.response.data.error);
         setContent({
           info: { count: -1, pages: -1, next: null, prev: null },
           results: [],

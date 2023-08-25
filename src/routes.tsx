@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./pages/App";
-import CharacterDetailsCard from "./components/CharacterDetailsCard";
+import CharacterDetailsCard from "./components/character/CharacterDetailsCard";
 
 export const router = createBrowserRouter([
   {

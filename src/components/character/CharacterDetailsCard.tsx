@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Details } from "../interfaces/details";
-import { getCharacter } from "../services/character";
+import { Details } from "../../interfaces/details";
+import { getCharacter } from "../../services/character";
 
 const CharacterDetailsCard = (props: any) => {
   const { id } = useParams();
@@ -17,7 +17,6 @@ const CharacterDetailsCard = (props: any) => {
     episode: [],
   });
   const [error, setError] = useState(false);
-  console.log("Error : ", error);
 
   useEffect(() => {
     getCharacter(id === undefined ? "" : id)
@@ -25,7 +24,6 @@ const CharacterDetailsCard = (props: any) => {
         setDetails(res.data);
       })
       .catch((e) => {
-        // console.log("error", e);
         setError(true);
       });
   }, [id]);
