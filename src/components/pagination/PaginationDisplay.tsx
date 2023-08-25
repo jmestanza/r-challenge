@@ -1,5 +1,3 @@
-import React from "react";
-
 const PaginationDisplay = (props: any) => {
   return (
     <div className="flex items-center justify-center flex-col">

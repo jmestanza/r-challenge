@@ -6,4 +6,5 @@ export interface Details {
   species: string;
   location: { name: string; url: string };
   episode: Array<string>;
+  error: string | null;
 }

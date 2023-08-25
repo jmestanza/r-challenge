@@ -1,6 +1,3 @@
-import axios from "axios";
-import React, { useState } from "react";
-
 const SearchBar = (props: any) => {
   const searchNameHandler = (e: any) => {
     props.setName(e.target.value);

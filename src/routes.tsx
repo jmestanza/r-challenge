@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./pages/App";
-import CharacterDetailsCard from "./components/character/CharacterDetailsCard";
+import CharacterDetails from "./components/character/CharacterDetails";
 
 export const router = createBrowserRouter([
   {
@@ -9,6 +9,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/:id",
-    element: <CharacterDetailsCard />,
+    element: <CharacterDetails />,
   },
 ]);

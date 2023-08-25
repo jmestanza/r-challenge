@@ -1,5 +1,3 @@
-import React from "react";
-
 import { CharacterProps } from "../../interfaces/characterProps";
 
 const CharacterCard = (props: CharacterProps) => {
